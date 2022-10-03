@@ -28,7 +28,7 @@ async def _img_(bot: Bot, event: GroupMessageEvent, data):
     if len(data) > 3:
         num = random.sample(range(0,len(data)-1), 3)
     if len(data) <= 3 :
-        num = random.sample(range(0,len(data)-1), 1)
+        num = random.randint(0, len(data)-1)
     for i in num:
         image = MessageSegment.image(f"https://px3.rainchan.win/img/small/{data[i]['pid']}")
         reply_msg = f'图片ID：{data[i]["pid"]}\n标题：{data[i]["title"]}\n作者：{data[i]["author"]}\n作者Pixiv UID：{data[i]["uid"]}\n标签：' + ', '.join(data[i]['tags']) + f'\n由于防止图片无法发出，图片为经过压缩的small版本，如需保存请前往下面链接：\nhttps://pixiv.re/{data[i]["pid"]}.jpg'
