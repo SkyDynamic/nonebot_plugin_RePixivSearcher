@@ -25,6 +25,6 @@ pip install nonebot_plugin_RePixivSearcher
 ```
 
 # 帮助  
-(需要在命令前添加命令前缀)
-搜 + 任意tag ——> 搜索此tag下的所有图，有可能没有此图
+(需要在命令前添加命令前缀)  
+搜 + 任意tag ——> 搜索此tag下的所有图，有可能没有此图  
 random ——> 随机一张图(压缩)
