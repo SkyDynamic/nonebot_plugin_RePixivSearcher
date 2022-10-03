@@ -25,9 +25,9 @@ async def search_(bot: Bot, event: GroupMessageEvent, arg: Message = CommandArg(
 async def _img_(bot: Bot, event: GroupMessageEvent, data):
     '''预处理img信息并发送img信息'''
     img_list = []
-    if len(data) >= 3:
+    if len(data) > 3:
         num = random.sample(range(0,len(data)-1), 3)
-    if len(data) < 3 :
+    if len(data) <= 3 :
         num = random.sample(range(0,len(data)-1), 1)
     for i in num:
         image = MessageSegment.image(f"https://px3.rainchan.win/img/small/{data[i]['pid']}")
