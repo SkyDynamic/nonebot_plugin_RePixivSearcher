@@ -1,0 +1,2 @@
+# nonebot_plugin_RePixivSearcher
+PixivSearcher的重构版，更换了API，使用了更好的搜索API
