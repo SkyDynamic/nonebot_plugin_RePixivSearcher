@@ -1,9 +1,8 @@
-from typing import overload
 import requests
 from .get_header import get_simple_header
 from .config import read
 
-async def tag_search(tag) -> dict:
+async def Tag_Search(tag) -> dict:
     '''
     传入需要搜索的tag，返回列表
     '''
@@ -21,3 +20,8 @@ async def tag_search(tag) -> dict:
         result = dict(requests.get(url = f"https://api.lolicon.app/setu/v2?size=original&tag={tag}&num=20").json())
         if not result.get("error"):
             return result.get("data"), 'lolicon'
+
+async def Search_Artist(artistId):
+    res_json = requests.get(f'https://pix.ipv4.host/artists/{artistId}')
+    if res_json.status_code == 200:
+        return res_json.json().get("data")
