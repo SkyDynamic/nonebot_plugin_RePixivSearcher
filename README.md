@@ -28,9 +28,9 @@ pip install nonebot_plugin_RePixivSearcher
 (需要在命令前添加命令前缀)  
 搜 + 任意tag ——> 搜索此tag下的所有图，有可能没有此图  
 random ——> 随机一张图(压缩)  
+画师 + ID(必须是纯数字) ——> 搜索画师信息  
 (需要在群里@机器人才能使用的指令,依然需要命令前缀)  
 login ——> 登录Pixivic(不登陆也行，但是图库量没这么大)  
-画师 + ID(必须是纯数字) ——> 搜索画师信息
 ## 注意
 登陆之前请先修改account.json里的内容（开启机器人会自动生成在/data/PixivSearcher/内)
 
